@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_my_map_location"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.cs342.projtwo.MyMapLocationActivity">
+
+    <!--
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/t2"
+        android:layout_toEndOf="@+id/t3"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/at1"
+        android:hint="Enter Starting Point"
+        android:background="@color/wallet_bright_foreground_holo_dark"
+        android:padding="@dimen/activity_horizontal_margin" />
+
+-->
+
+    <!--
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/at2"
+            android:hint="Enter Destination"
+            android:background="@color/wallet_bright_foreground_holo_dark"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/at1"
+            android:layout_toEndOf="@+id/t4"
+            android:layout_alignRight="@id/at1"
+            android:layout_alignStart="@+id/at1" />
+    -->
+
+    <Button
+        android:text="Find Path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:onClick="GoTo2"
+        android:layout_marginBottom="54dp"
+        android:layout_above="@+id/t5"
+        android:layout_toEndOf="@+id/t2"
+        android:layout_marginStart="32dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:id="@+id/b5"
+        android:onClick="GoTo1"
+        android:text="Find on Map"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/button3" />
+
+    <TextView
+        android:text="Or Select Location on Map:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/t5"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/cast_expanded_controller_background_color"
+        android:layout_alignTop="@+id/b5"
+        android:layout_alignEnd="@+id/fromInput" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/fromInput"
+        android:hint="from"
+        android:textSize="14sp"
+        android:gravity="top|center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/t4" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/toInput"
+        android:hint="to"
+        android:textSize="14sp"
+        android:gravity="top"
+        android:layout_height="130dp"
+        android:layout_above="@+id/fromInput"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Enter Your Location:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/t2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/place_autocomplete_search_text"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>

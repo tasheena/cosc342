@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_map_enter_location"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.cs342.projtwo.MapEnterLocationActivity">
+
+    <TextView
+        android:text="Enter two locations for which you want directions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/headerText"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textHeader2"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:textStyle="normal|bold"
+        android:text="Or, find locations on map:"
+        android:layout_alignBottom="@+id/touchMapButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="47dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
+
+    <Button
+        android:text="Get directions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toFromEnter"
+        android:background="@android:color/holo_purple"
+        android:layout_above="@+id/textHeader2"
+        android:layout_alignStart="@+id/textHeader2"
+        android:layout_alignEnd="@+id/textHeader2"
+        android:onClick="openMapsActivityWithLocations"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/fromInput"
+        android:hint="From"
+        android:textSize="14sp"
+        android:layout_alignStart="@+id/toFromEnter"
+        android:layout_alignEnd="@+id/toFromEnter"
+        android:layout_above="@+id/toFromEnter"
+        android:layout_below="@+id/toInput"
+        android:gravity="top|center_vertical" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/toInput"
+        android:hint="To"
+        android:textSize="14sp"
+        android:gravity="top"
+        android:layout_height="130dp"
+        android:layout_below="@+id/headerText"
+        android:layout_alignStart="@+id/fromInput"
+        android:layout_alignEnd="@+id/fromInput" />
+
+    <Button
+        android:text="Find Locations on Map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/touchMapButton"
+        android:background="@android:color/holo_purple"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/textHeader2"
+        android:layout_alignStart="@+id/textHeader2"
+        android:onClick="GoTo1"/>
+</RelativeLayout>
+
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_map_enter_location"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.cs342.projtwo.MapEnterLocationActivity">
+
+    </RelativeLayout>
+    -->
